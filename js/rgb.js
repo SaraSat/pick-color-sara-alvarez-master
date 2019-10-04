@@ -1,3 +1,13 @@
+document.getElementById("enviar").addEventListener("click",function(e){
+  var r = document.getElementById("r").value;
+  var g = document.getElementById("g").value;    
+  var b = document.getElementById("b").value;    
+  
+  var valorHex = rgb(r,g,b);
+  // alert(valorHex);
+  document.getElementById("hex").value = valorHex;
+});
+
 function rgb(r, g, b) {
   r = parseInt(r);
   g = parseInt(g);
