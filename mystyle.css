@@ -1,0 +1,26 @@
+body {
+    background-color: antiquewhite;
+    text-align: center;
+    font-size: 2em;
+}
+
+div {
+    margin-top: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button {
+    margin: 3% 2% 2% 3%;
+    padding: 2%;
+    background-color: rgb(145, 73, 73);
+    font-weight: bolder;
+    border-radius: 60%;
+    color: rgb(253, 237, 237);
+}
+
+input {
+    padding: 1%;
+    margin: 2% 2% 2% 0.5%;
+    border-style: dashed;
+    border-radius: 10%;
+}

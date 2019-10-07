@@ -1,3 +1,28 @@
+
+
+document.getElementById("enviar").addEventListener("click", function (e) {
+    var r = document.getElementById("r").value;
+    var g = document.getElementById("g").value;
+    var b = document.getElementById("b").value;
+
+    var valorHex = rgb(r, g, b);
+    document.getElementById("hex").value = valorHex;
+
+});
+
+
+
+document.getElementById("enviar2").addEventListener("click", function (e) {
+    var h = document.getElementById("hex").value;
+    var hexad = hex(h);
+    document.getElementById("r").value = hexad[0];
+    document.getElementById("g").value = hexad[1];
+    document.getElementById("b").value = hexad[2];
+
+});
+
+
+
 function rgb(r, g, b) {
     r = parseInt(r);
     g = parseInt(g);
@@ -30,30 +55,6 @@ function rgb(r, g, b) {
 
     return "#" + rh + "" + gh + "" + bh;
 }
-
-
-
-
-
-
-
-document.getElementById("enviar2").addEventListener("click", function (e) {
-    var h = document.getElementById("hex").value;
-    var hexad = hex(h);
-    document.getElementById("r").value = hexad[0];
-    document.getElementById("g").value = hexad[1];
-    document.getElementById("b").value = hexad[2];
-
-});
-
-
-
-
-
-
-
-
-
 
 
 
