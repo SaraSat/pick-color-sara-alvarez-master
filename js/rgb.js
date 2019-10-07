@@ -6,6 +6,15 @@ document.getElementById("enviar").addEventListener("click",function(e){
   var valorHex = rgb(r,g,b);
   // alert(valorHex);
   document.getElementById("hex").value = valorHex;
+  
+
+});
+document.getElementById("enviar2").addEventListener("click",function(e){
+  var h=document.getElementById("hex").value;
+  var valorRGB= hex(h);
+  document.getElementById("r").value=valorRGB[0];
+  document.getElementById("g").value=valorRGB[1];
+  document.getElementById("b").value=valorRGB[2];
 });
 
 function rgb(r, g, b) {
@@ -43,10 +52,9 @@ function rgb(r, g, b) {
 
 function hex(h) {
   h = h.toString().toUpperCase();
-  var ñ = h.charAt(0) + h.charAt(1);
-  var r = h.charAt(2) + h.charAt(3);
-  var g = h.charAt(4) + h.charAt(5);
-  var b = h.charAt(6) + h.charAt(7);
+  var r = h.charAt(1) + h.charAt(2);
+  var g = h.charAt(3) + h.charAt(4);
+  var b = h.charAt(4) + h.charAt(6);
   r = parseInt(r, 16).toString();
   g = parseInt(g, 16).toString();
   b = parseInt(b, 16).toString();
@@ -54,7 +62,7 @@ function hex(h) {
   r=r.padStart(3, "0");
   g=g.padStart(3, "0");
   b=b.padStart(3, "0");
-
-  return r + '' + g + '' + b;
+var he=[r,g,b];
+  return he;
 }
 
